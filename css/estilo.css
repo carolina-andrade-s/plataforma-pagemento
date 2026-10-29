@@ -1,0 +1,205 @@
+/* Estilo da Plataforma de Pagamento (simulação) */
+
+* {
+  box-sizing: border-box;
+}
+
+/* Garante que o atributo "hidden" esconda mesmo os elementos com display definido */
+[hidden] {
+  display: none !important;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", system-ui, sans-serif;
+  background: #edf1f6;
+  color: #1b2733;
+}
+
+.pagina {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 24px 16px 64px;
+}
+
+h1 {
+  margin: 0 0 8px;
+  font-size: 1.7rem;
+}
+
+h2 {
+  margin: 0 0 14px;
+  font-size: 1.1rem;
+}
+
+.aviso {
+  margin: 0 0 20px;
+  padding: 10px 12px;
+  background: #fff4d6;
+  border-left: 4px solid #d99a00;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+/* Duas colunas no computador, uma só no celular */
+.colunas {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  align-items: start;
+}
+
+.cartao {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 18px;
+  margin-bottom: 16px;
+}
+
+.lista {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.lista li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 0;
+  border-top: 1px solid #e1e8ef;
+}
+
+.lista li:first-child {
+  border-top: none;
+}
+
+.item-nome {
+  font-weight: 600;
+}
+
+.item-preco {
+  color: #50657a;
+  font-size: 0.9rem;
+}
+
+.controle-quantidade {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.total {
+  margin: 14px 0 0;
+  text-align: right;
+  font-size: 1.1rem;
+}
+
+/* Formulário */
+
+label {
+  display: block;
+  margin: 12px 0 4px;
+  font-size: 0.9rem;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #b4c2d0;
+  border-radius: 6px;
+  background: #ffffff;
+  font-size: 1rem;
+}
+
+.duas-colunas {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.dica {
+  margin: 10px 0 0;
+  color: #50657a;
+  font-size: 0.85rem;
+}
+
+.codigo {
+  padding: 10px;
+  background: #edf1f6;
+  border-radius: 6px;
+  font-family: Consolas, monospace;
+  font-size: 0.85rem;
+  word-break: break-all;
+}
+
+.erro {
+  min-height: 1.4em;
+  margin: 12px 0 0;
+  color: #b3261e;
+  font-size: 0.9rem;
+}
+
+/* Botões */
+
+button {
+  padding: 10px 16px;
+  border: 1px solid #0b5cab;
+  border-radius: 6px;
+  background: #0b5cab;
+  color: #ffffff;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+button:hover:not(:disabled) {
+  background: #094a8a;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
+
+button.pequeno {
+  padding: 4px 10px;
+  background: #ffffff;
+  color: #0b5cab;
+}
+
+button.pequeno:hover:not(:disabled) {
+  background: #e4effa;
+}
+
+#botaoPagar {
+  width: 100%;
+  margin-top: 8px;
+}
+
+input:focus,
+select:focus,
+button:focus-visible {
+  outline: 3px solid #8dbbe8;
+  outline-offset: 1px;
+}
+
+/* Tela de resultado */
+
+.resultado {
+  max-width: 520px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.resultado h2 {
+  color: #1e7a3c;
+  font-size: 1.4rem;
+}
+
+@media (max-width: 720px) {
+  .colunas {
+    grid-template-columns: 1fr;
+  }
+}
